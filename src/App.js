@@ -4,7 +4,6 @@ import Hello from "./components/Hello";
 
 function App() {
   const o = { asd: "1", dsa: 2 };
-  const asd = true;
   const arr = [1, 2, 3];
   // const n = 44;
   return (
