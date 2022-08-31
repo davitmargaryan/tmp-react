@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Hello from "./components/Hello";
+import TodoApp from "./components/todo/TodoApp";
 
 function App() {
   const o = { asd: "1", dsa: 2 };
@@ -8,14 +9,15 @@ function App() {
   // const n = 44;
   return (
     <>
-      <Hello
+      <TodoApp />
+      {/* <Hello
         name="Davit"
         someNumber={44}
         asd
         dsa="d"
         someObj={o}
         someArr={arr}
-      />
+      /> */}
     </>
   );
 }

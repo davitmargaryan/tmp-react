@@ -1,3 +1,13 @@
-.asdasd {
-  color: red;
+.main-wrapper {
+  width: 500px;
+}
+.todo-header {
+  margin: 2px;
+}
+.todo-item-wrapper {
+  border: 1px solid gray;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
