@@ -12,26 +12,22 @@ class ClockClass extends React.Component {
   }
 
   componentDidMount() {
-    // fetch getString()
-    // this.setState({asd : 'nor ekac tvyal@'})
-    // console.log("Component already mounted");
+    console.log("ClockClass component mounted");
     this.timerId = setInterval(() => {
+      console.log("interval callback");
       this.setState({
         date: new Date(),
-        asd: this.state.asd + 1,
       });
-      //   this.state.date = new Date();
-      //   console.log(this.state.date);
-      //   this.render();
-    }, 5000);
+    }, 1000);
   }
 
   componentDidUpdate() {
-    // console.log("component updated");
+    console.log("ClockClass component updated");
   }
 
   componentWillUnmount() {
     clearInterval(this.timerId);
+    console.log("ClockClass component unmounted");
   }
 
   render() {
@@ -39,13 +35,7 @@ class ClockClass extends React.Component {
     // console.log(this.state.date);
     return (
       <>
-        <h2>
-          {this.props.dsa}
-          {this.props.asd} It is {this.state.date.toLocaleTimeString()}.
-        </h2>
-        {this.state.asd ? <div>{this.state.asd}</div> : null}
-        {!!this.state.asd && <div>{this.state.asd}</div>}
-        <div>{this.state.dsa}</div>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </>
     );
   }

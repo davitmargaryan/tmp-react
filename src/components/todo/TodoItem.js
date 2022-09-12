@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeConsumer } from "../../contexts/ThemeContext";
 
 class TodoItem extends React.Component {
   render() {
@@ -9,7 +10,19 @@ class TodoItem extends React.Component {
           checked={this.props.todoItem.done}
           onChange={() => this.props.onChangeTodoState(this.props.todoItem.id)}
         />
-        <div>{this.props.todoItem.name}</div>
+        <ThemeConsumer>
+          {(val) => {
+            return (
+              <div
+                style={{
+                  color: val,
+                }}
+              >
+                {this.props.todoItem.name}
+              </div>
+            );
+          }}
+        </ThemeConsumer>
         <button
           onClick={() => {
             console.log("called button onclick in TodoItem cmp");
